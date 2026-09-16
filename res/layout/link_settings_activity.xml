@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.o.joey.ConfigViews.CLinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" app:cBackgroundColor="@integer/color_canvas"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <o.o.joey.ConfigViews.CCoordinatorLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" card_view:cBackgroundColor="@integer/color_canvas"
+      xmlns:card_view="http://schemas.android.com/apk/res-auto">
+        <o.o.joey.ConfigViews.CAppBarLayout android:id="@id/appbar" android:layout_width="match_parent" android:layout_height="wrap_content" android:stateListAnimator="@null">
+            <androidx.appcompat.widget.Toolbar android:theme="@style/toolBarStyle" android:id="@id/toolbar" android:layout_width="match_parent" android:layout_height="@dimen/toolbar_height" android:minHeight="@dimen/toolbar_height" card_view:layout_scrollFlags="scroll|enterAlways|snap" />
+        </o.o.joey.ConfigViews.CAppBarLayout>
+        <o.o.joey.ConfigViews.CNestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" card_view:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <o.o.joey.ConfigViews.CLinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <o.o.joey.ConfigViews.CCardView android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:elevation="100.0dp" card_view:cBackgroundColor="@integer/color_subject_background" card_view:cardCornerRadius="0.0dp" card_view:cardPreventCornerOverlap="false" card_view:cardUseCompatPadding="true">
+                    <o.o.joey.ConfigViews.CLinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <o.o.joey.ConfigViews.CLinearLayout android:id="@id/default_browser_clickable" style="@style/SettingLinearLayoutItemVertical">
+                            <o.o.joey.ConfigViews.CTextView android:text="@string/settings_default_browser" style="@style/setting_text_main_without_icon" />
+                            <o.o.joey.ConfigViews.CTextView android:id="@id/default_browser_textview" style="@style/setting_subtext_without_icon" />
+                        </o.o.joey.ConfigViews.CLinearLayout>
+                        <o.o.joey.ConfigViews.CLinearLayout android:id="@id/default_custom_tab_provider_clickable" style="@style/SettingLinearLayoutItemVertical">
+                            <o.o.joey.ConfigViews.CTextView android:text="@string/settings_default_tab_provider" style="@style/setting_text_main_without_icon" />
+                            <o.o.joey.ConfigViews.CTextView android:id="@id/default_custom_tab_provider_textview" style="@style/setting_subtext_without_icon" />
+                        </o.o.joey.ConfigViews.CLinearLayout>
+                    </o.o.joey.ConfigViews.CLinearLayout>
+                </o.o.joey.ConfigViews.CCardView>
+                <o.o.joey.ConfigViews.CCardView android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:elevation="100.0dp" card_view:cBackgroundColor="@integer/color_subject_background" card_view:cardCornerRadius="0.0dp" card_view:cardPreventCornerOverlap="false" card_view:cardUseCompatPadding="true">
+                    <o.o.joey.ConfigViews.CLinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <o.o.joey.ConfigViews.CTextView android:text="@string/setting_link_in_app_title" style="@style/setting_section_title" />
+                        <o.o.joey.ConfigViews.CView style="@style/Divider" />
+                        <o.o.joey.ConfigViews.CLinearLayout style="@style/SettingLinearLayoutItemHorizontal">
+                            <o.o.joey.ConfigViews.CTextView android:text="@string/view_in_app_yt" style="@style/setting_text_main_without_icon" />
+                            <View android:layout_width="0.0dp" android:layout_height="0.0dp" android:layout_weight="1.0" />
+                            <com.google.android.material.materialswitch.MaterialSwitch android:id="@id/view_in_app_yt_switch" android:paddingRight="@dimen/setting_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        </o.o.joey.ConfigViews.CLinearLayout>
+                        <o.o.joey.ConfigViews.CLinearLayout android:paddingBottom="8.0dp" android:layout_height="wrap_content" style="@style/SettingLinearLayoutItemHorizontal">
+                            <o.o.joey.ConfigViews.CLinearLayout android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/SettingLinearLayoutItemVertical">
+                                <o.o.joey.ConfigViews.CTextView android:text="@string/fullscreen_yt_video" style="@style/setting_text_main_without_icon" />
+                                <o.o.joey.ConfigViews.CTextView android:text="@string/fullscreen_yt_video_subtext" style="@style/setting_subtext_without_icon" />
+                            </o.o.joey.ConfigViews.CLinearLayout>
+                            <com.google.android.material.materialswitch.MaterialSwitch android:id="@id/fullscreen_yt_switch" android:paddingRight="@dimen/setting_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        </o.o.joey.ConfigViews.CLinearLayout>
+                        <o.o.joey.ConfigViews.CView style="@style/Divider" />
+                    </o.o.joey.ConfigViews.CLinearLayout>
+                </o.o.joey.ConfigViews.CCardView>
+                <o.o.joey.ConfigViews.CCardView android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:elevation="100.0dp" card_view:cBackgroundColor="@integer/color_subject_background" card_view:cardCornerRadius="0.0dp" card_view:cardPreventCornerOverlap="false" card_view:cardUseCompatPadding="true">
+                    <o.o.joey.ConfigViews.CLinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <o.o.joey.ConfigViews.CTextView android:text="@string/setting_link_in_browser_title" style="@style/setting_section_title" />
+                        <o.o.joey.ConfigViews.CLinearLayout android:id="@id/domain_exception_clickable" style="@style/SettingLinearLayoutItemVertical">
+                            <o.o.joey.ConfigViews.CTextView android:text="@string/setting_domain_exception" style="@style/setting_text_main_without_icon" />
+                            <o.o.joey.ConfigViews.CTextView android:text="@string/domain_exception_subtext" style="@style/setting_subtext_without_icon" />
+                        </o.o.joey.ConfigViews.CLinearLayout>
+                        <o.o.joey.ConfigViews.CLinearLayout style="@style/SettingLinearLayoutItemHorizontal">
+                            <o.o.joey.ConfigViews.CTextView android:layout_width="0.0dp" android:text="@string/view_in_app_imgur_gallery" android:layout_weight="1.0" style="@style/setting_text_main_without_icon" />
+                            <com.google.android.material.materialswitch.MaterialSwitch android:id="@id/open_externally_imgur_gallery" android:paddingRight="@dimen/setting_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        </o.o.joey.ConfigViews.CLinearLayout>
+                    </o.o.joey.ConfigViews.CLinearLayout>
+                </o.o.joey.ConfigViews.CCardView>
+                <o.o.joey.ConfigViews.CCardView android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:elevation="100.0dp" card_view:cBackgroundColor="@integer/color_subject_background" card_view:cardCornerRadius="0.0dp" card_view:cardPreventCornerOverlap="false" card_view:cardUseCompatPadding="true">
+                    <o.o.joey.ConfigViews.CLinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <o.o.joey.ConfigViews.CTextView android:text="@string/setting_link_display_options" style="@style/setting_section_title" />
+                        <o.o.joey.ConfigViews.CLinearLayout style="@style/SettingLinearLayoutItemHorizontal">
+                            <o.o.joey.ConfigViews.CTextView android:layout_width="0.0dp" android:text="@string/setting_show_link_domain" android:layout_weight="1.0" style="@style/setting_text_main_without_icon" />
+                            <com.google.android.material.materialswitch.MaterialSwitch android:id="@id/domain_next_to_link_switch" android:paddingRight="@dimen/setting_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        </o.o.joey.ConfigViews.CLinearLayout>
+                        <o.o.joey.ConfigViews.CLinearLayout style="@style/SettingLinearLayoutItemHorizontal">
+                            <o.o.joey.ConfigViews.CTextView android:layout_width="0.0dp" android:text="@string/enlarge_links" android:layout_weight="1.0" style="@style/setting_text_main_without_icon" />
+                            <com.google.android.material.materialswitch.MaterialSwitch android:id="@id/enlarge_links_switch" android:paddingRight="@dimen/setting_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        </o.o.joey.ConfigViews.CLinearLayout>
+                        <o.o.joey.ConfigViews.CLinearLayout android:paddingBottom="8.0dp" android:layout_height="wrap_content" style="@style/SettingLinearLayoutItemHorizontal">
+                            <o.o.joey.ConfigViews.CLinearLayout android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/SettingLinearLayoutItemVertical">
+                                <o.o.joey.ConfigViews.CTextView android:text="@string/setting_link_preview" style="@style/setting_text_main_without_icon" />
+                                <o.o.joey.ConfigViews.CTextView android:text="@string/link_preview_subtext" style="@style/setting_subtext_without_icon" />
+                            </o.o.joey.ConfigViews.CLinearLayout>
+                            <com.google.android.material.materialswitch.MaterialSwitch android:id="@id/preview_link_switch" android:paddingRight="@dimen/setting_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        </o.o.joey.ConfigViews.CLinearLayout>
+                    </o.o.joey.ConfigViews.CLinearLayout>
+                </o.o.joey.ConfigViews.CCardView>
+            </o.o.joey.ConfigViews.CLinearLayout>
+        </o.o.joey.ConfigViews.CNestedScrollView>
+        <include layout="@layout/bottom_toolbar" />
+    </o.o.joey.ConfigViews.CCoordinatorLayout>
+    <o.o.joey.ConfigViews.CFrameLayout android:layout_gravity="center|bottom" android:id="@id/ad_frameLayout" android:layout_width="match_parent" android:layout_height="wrap_content" />
+</o.o.joey.ConfigViews.CLinearLayout>
