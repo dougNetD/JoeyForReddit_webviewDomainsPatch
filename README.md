@@ -9,4 +9,7 @@ https://www.reddit.com/r/JoeyForReddit/comments/1wfk12v/patched_new_option_list_
 3. build apk again with apktool
 4. patch the apk with morphe and install as usual
 
+you can diff it yourself against the official apk code:
+https://github.com/dougNetD/JoeyForReddit_webviewDomainsPatch/compare/official-2.1.6.5...Always-open-domains-webview-patch
+
 if you can make this into a functional revanced/morphe patch, please do and lemme know!
