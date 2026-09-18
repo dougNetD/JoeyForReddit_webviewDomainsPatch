@@ -46,6 +46,10 @@
                             <o.o.joey.ConfigViews.CTextView android:text="@string/setting_domain_exception" style="@style/setting_text_main_without_icon" />
                             <o.o.joey.ConfigViews.CTextView android:text="@string/domain_exception_subtext" style="@style/setting_subtext_without_icon" />
                         </o.o.joey.ConfigViews.CLinearLayout>
+                        <o.o.joey.ConfigViews.CLinearLayout android:id="@+id/webview_domain_clickable" style="@style/SettingLinearLayoutItemVertical">
+                            <o.o.joey.ConfigViews.CTextView android:text="WebView Domains" style="@style/setting_text_main_without_icon" />
+                            <o.o.joey.ConfigViews.CTextView android:text="Domains that always open in the in-app WebView" style="@style/setting_subtext_without_icon" />
+                        </o.o.joey.ConfigViews.CLinearLayout>
                         <o.o.joey.ConfigViews.CLinearLayout style="@style/SettingLinearLayoutItemHorizontal">
                             <o.o.joey.ConfigViews.CTextView android:layout_width="0.0dp" android:text="@string/view_in_app_imgur_gallery" android:layout_weight="1.0" style="@style/setting_text_main_without_icon" />
                             <com.google.android.material.materialswitch.MaterialSwitch android:id="@id/open_externally_imgur_gallery" android:paddingRight="@dimen/setting_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />

@@ -36,10 +36,22 @@
     .end annotation
 .end field
 
+.field c2:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field d1:Landroid/view/View;
+
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .registers 2
 
     .line 1
     invoke-direct {p0}, Lo/o/joey/Activities/SlidingBaseActivity;-><init>()V
@@ -60,11 +72,18 @@
 
     .line 10
     .line 11
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lo/o/joey/SettingActivities/LinkSettings;->c2:Ljava/util/List;
+
+    .line 12
     return-void
 .end method
 
 .method private B3()V
-    .locals 1
+    .registers 2
 
     .line 1
     invoke-virtual {p0}, Lo/o/joey/Activities/BaseActivity;->t1()V
@@ -99,7 +118,7 @@
 .end method
 
 .method static bridge synthetic o3(Lo/o/joey/SettingActivities/LinkSettings;)V
-    .locals 0
+    .registers 1
 
     .line 1
     invoke-direct {p0}, Lo/o/joey/SettingActivities/LinkSettings;->u3()V
@@ -111,7 +130,7 @@
 .end method
 
 .method static bridge synthetic p3(Lo/o/joey/SettingActivities/LinkSettings;Ljava/util/List;Landroid/content/Context;)V
-    .locals 0
+    .registers 3
 
     .line 1
     invoke-direct {p0, p1, p2}, Lo/o/joey/SettingActivities/LinkSettings;->z3(Ljava/util/List;Landroid/content/Context;)V
@@ -123,7 +142,7 @@
 .end method
 
 .method static bridge synthetic q3(Lo/o/joey/SettingActivities/LinkSettings;)V
-    .locals 0
+    .registers 1
 
     .line 1
     invoke-direct {p0}, Lo/o/joey/SettingActivities/LinkSettings;->B3()V
@@ -135,7 +154,7 @@
 .end method
 
 .method private r3()V
-    .locals 2
+    .registers 3
 
     .line 1
     iget-object v0, p0, Lo/o/joey/SettingActivities/LinkSettings;->Z0:Lcom/google/android/material/materialswitch/MaterialSwitch;
@@ -199,7 +218,7 @@
 .end method
 
 .method private s3()V
-    .locals 11
+    .registers 12
 
     .line 1
     invoke-static {p0}, Lzd/e;->m(Landroid/content/Context;)Lq1/f$e;
@@ -473,7 +492,7 @@
 .end method
 
 .method private t3()V
-    .locals 2
+    .registers 3
 
     .line 1
     iget-object v0, p0, Lo/o/joey/SettingActivities/LinkSettings;->b1:Landroid/widget/TextView;
@@ -513,7 +532,7 @@
 
     .line 19
     .line 20
-    if-ne v0, v1, :cond_0
+    if-ne v0, v1, :cond_1c
 
     .line 21
     .line 22
@@ -529,10 +548,10 @@
     .line 26
     .line 27
     .line 28
-    goto :goto_0
+    goto :goto_23
 
     .line 29
-    :cond_0
+    :cond_1c
     iget-object v0, p0, Lo/o/joey/SettingActivities/LinkSettings;->a1:Landroid/view/View;
 
     .line 30
@@ -546,7 +565,7 @@
     .line 34
     .line 35
     .line 36
-    :goto_0
+    :goto_23
     iget-object v0, p0, Lo/o/joey/SettingActivities/LinkSettings;->a1:Landroid/view/View;
 
     .line 37
@@ -569,7 +588,7 @@
 .end method
 
 .method private u3()V
-    .locals 2
+    .registers 3
 
     .line 1
     invoke-direct {p0}, Lo/o/joey/SettingActivities/LinkSettings;->r3()V
@@ -638,17 +657,25 @@
     .line 35
     .line 36
     .line 37
-    iget-object v0, p0, Lo/o/joey/SettingActivities/LinkSettings;->R0:Landroid/view/View;
+    iget-object v0, p0, Lo/o/joey/SettingActivities/LinkSettings;->d1:Landroid/view/View;
+
+    new-instance v1, Lo/o/joey/SettingActivities/LinkSettings$o;
+
+    invoke-direct {v1, p0}, Lo/o/joey/SettingActivities/LinkSettings$o;-><init>(Lo/o/joey/SettingActivities/LinkSettings;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 38
+    iget-object v0, p0, Lo/o/joey/SettingActivities/LinkSettings;->R0:Landroid/view/View;
+
     .line 39
+    .line 40
     new-instance v1, Lo/o/joey/SettingActivities/LinkSettings$g;
 
-    .line 40
     .line 41
+    .line 42
     invoke-direct {v1, p0}, Lo/o/joey/SettingActivities/LinkSettings$g;-><init>(Lo/o/joey/SettingActivities/LinkSettings;)V
 
-    .line 42
     .line 43
     .line 44
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
@@ -665,7 +692,7 @@
 .end method
 
 .method private v3()V
-    .locals 1
+    .registers 2
 
     .line 1
     const v0, 0x7f0a0245
@@ -866,32 +893,41 @@
 
     .line 104
     .line 105
-    const v0, 0x7f0a0800
+    const v0, 0x7f0a081a
 
-    .line 106
-    .line 107
-    .line 108
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
-    .line 109
-    .line 110
-    .line 111
     move-result-object v0
 
+    iput-object v0, p0, Lo/o/joey/SettingActivities/LinkSettings;->d1:Landroid/view/View;
+
+    .line 106
+    const v0, 0x7f0a0800
+
+    .line 107
+    .line 108
+    .line 109
+    invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    .line 110
+    .line 111
     .line 112
-    check-cast v0, Lcom/google/android/material/materialswitch/MaterialSwitch;
+    move-result-object v0
 
     .line 113
+    check-cast v0, Lcom/google/android/material/materialswitch/MaterialSwitch;
+
     .line 114
+    .line 115
     iput-object v0, p0, Lo/o/joey/SettingActivities/LinkSettings;->U0:Lcom/google/android/material/materialswitch/MaterialSwitch;
 
-    .line 115
     .line 116
+    .line 117
     return-void
 .end method
 
 .method private w3()I
-    .locals 1
+    .registers 2
 
     .line 1
     invoke-static {}, Lmb/j;->f()Lmb/j;
@@ -922,7 +958,7 @@
 .end method
 
 .method private x3()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
     .line 1
     invoke-static {}, Lmb/j;->f()Lmb/j;
@@ -941,7 +977,7 @@
     move-result-object v0
 
     .line 9
-    if-nez v0, :cond_0
+    if-nez v0, :cond_11
 
     .line 10
     .line 11
@@ -958,12 +994,12 @@
     move-result-object v0
 
     .line 18
-    :cond_0
+    :cond_11
     return-object v0
 .end method
 
 .method private y3()V
-    .locals 2
+    .registers 3
 
     .line 1
     iget-object v0, p0, Lo/o/joey/SettingActivities/LinkSettings;->Z0:Lcom/google/android/material/materialswitch/MaterialSwitch;
@@ -1120,7 +1156,7 @@
 .end method
 
 .method private z3(Ljava/util/List;Landroid/content/Context;)V
-    .locals 4
+    .registers 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1133,18 +1169,18 @@
     .end annotation
 
     .line 1
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_5e
 
     .line 2
     .line 3
-    if-nez p2, :cond_0
+    if-nez p2, :cond_5
 
     .line 4
     .line 5
-    goto :goto_1
+    goto :goto_5e
 
     .line 6
-    :cond_0
+    :cond_5
     invoke-static {p2}, Lzd/e;->m(Landroid/content/Context;)Lq1/f$e;
 
     .line 7
@@ -1170,7 +1206,7 @@
     move-result-object v2
 
     .line 19
-    :goto_0
+    :goto_12
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     .line 20
@@ -1179,7 +1215,7 @@
     move-result v3
 
     .line 23
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_26
 
     .line 24
     .line 25
@@ -1208,10 +1244,10 @@
     .line 36
     .line 37
     .line 38
-    goto :goto_0
+    goto :goto_12
 
     .line 39
-    :cond_1
+    :cond_26
     const v2, 0x7f1306c3
 
     .line 40
@@ -1316,15 +1352,15 @@
     .line 93
     .line 94
     .line 95
-    :cond_2
-    :goto_1
+    :cond_5e
+    :goto_5e
     return-void
 .end method
 
 
 # virtual methods
 .method public A3()V
-    .locals 3
+    .registers 4
 
     .line 1
     new-instance v0, Lo/o/joey/SettingActivities/LinkSettings$e;
@@ -1397,7 +1433,7 @@
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .locals 2
+    .registers 4
 
     .line 1
     invoke-super {p0, p1}, Lo/o/joey/Activities/SlidingBaseActivity;->onCreate(Landroid/os/Bundle;)V
@@ -1451,11 +1487,23 @@
 
     .line 29
     .line 30
+    sget-object v0, Lza/a;->E:Landroid/content/SharedPreferences;
+
+    const-string v1, "PREF_WEBVIEW_DOMAIN_LIST"
+
+    const/4 p1, 0x0
+
+    invoke-static {v0, v1, p1}, Lzd/c1;->d(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lo/o/joey/SettingActivities/LinkSettings;->c2:Ljava/util/List;
+
     return-void
 .end method
 
 .method protected onPause()V
-    .locals 3
+    .registers 4
 
     .line 1
     invoke-super {p0}, Lo/o/joey/Activities/SlidingBaseActivity;->onPause()V
@@ -1479,5 +1527,13 @@
     .line 10
     .line 11
     .line 12
+    iget-object v0, p0, Lo/o/joey/SettingActivities/LinkSettings;->c2:Ljava/util/List;
+
+    const-string v1, "PREF_WEBVIEW_DOMAIN_LIST"
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Lzd/c1;->f(Ljava/util/List;Ljava/lang/String;Landroid/content/SharedPreferences;)V
+
     return-void
 .end method
